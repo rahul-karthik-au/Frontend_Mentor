@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'FigtreeExtraBold';
   src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 300 700;
 }
 
 @font-face {
@@ -22,21 +22,22 @@ body{
 }
 .card{
     margin: auto;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap:0.75rem;
+    justify-content: space-between; */
     border:1px solid black;
     background-color: hsl(0, 0%, 100%);
     padding: 1.5rem;
     border-radius: 1.25rem;
     width: 24rem;
-    height:32.625rem;
     box-shadow: 0.5rem 0.5rem 0 black;
 }
 .card-image{
     width: 21rem;
     height: 12.5rem;
     border-radius: 0.625rem;
+    margin-bottom: 0.75rem;
 }
 .card-body{
     line-height: 150%;
@@ -54,21 +55,26 @@ body{
     font-family: 'FigtreeVariable';
     font-weight: 400;
     font-size: 0.875rem;
+    margin-bottom: 0.75rem;
 }
 .card-heading{
     font-family:'FigtreeExtraBold';
     font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+.card-heading:hover{
+    color:hsl(47, 88%, 63%) ;
+    cursor: pointer;
 }
 .card-des{
     font-family: 'FigtreeVariable';
     font-size: 1rem;
     font-weight: 100;
     color: hsl(0, 0%, 42%);
-    
+    margin-bottom: 0.75rem;
 }
 .card-footer{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 .avatar{
@@ -78,5 +84,20 @@ body{
 }
 .avatar-name{
     font-family:'FigtreeExtraBold';
+    font-weight: 300;
     text-align: center;
+}
+
+@media (max-width:375px) {
+    .card{
+        width: 20.438rem;
+        height: 31.313rem;
+    }
+    .card-image{
+        width: 17.438rem;
+        height: 12.5rem;
+    }
+    .card-heading{
+        font-size: 1.25rem;
+    }
 }
